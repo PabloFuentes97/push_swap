@@ -1,4 +1,5 @@
-SRCS =  push_swap.c array_to_list.c check_functions.c int_split.c ft_split.c instructions.c instructions2.c check_args.c binary_member.c sort_five_or_less.c lst_functions.c radix_sort.c sort_checker.c utils.c utils2.c main.c
+SRCS =  push_swap.c array_to_list.c check_functions.c int_split.c ft_split.c instructions.c instructions2.c check_args.c binary_member.c sort_five_or_less.c lst_functions.c radix_sort.c sort_checker.c utils.c utils2.c free_matrix.c main.c
+
 OBJS = ${SRCS:.c=.o}
 
 CC = gcc -Wall -Werror -Wextra
@@ -7,11 +8,11 @@ CFLAGS	= -fsanitize=address -g3 -Wextra -Wall -Werror
 
 NAME = push_swap
 .c.o:
-	${CC} $(CFLAGS) -c $< -o ${<:.c=.o} -I.
+	${CC} -c $< -o ${<:.c=.o} -I.
 
 ${NAME}:	${OBJS}
 #		ar rc ${NAME} ${OBJS}
-	$(CC) $(LDFLAGS) -o $@ $^
+	$(CC) -o $@ $^
 
 all:		${NAME}
 
