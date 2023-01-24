@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 13:03:09 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/01/16 13:14:00 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/01/20 12:02:25 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	*sort_pos(int *sort_array, int *org_array, int len)
 		cont1++;
 		cont2 = 0;
 	}
+	free(org_array);
 	return (pos_array);
 }
 
@@ -97,4 +98,6 @@ void	binary_member(t_list **head, int *array, int len)
 		curr = curr->next;
 		cont++;
 	}
+	free(pos_array);
+	free(array);
 }

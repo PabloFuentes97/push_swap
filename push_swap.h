@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 13:03:09 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/01/18 11:51:30 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/01/20 11:51:39 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,14 @@ void		rrr(t_list **head_a, t_list **head_b,
 t_list		*array_to_list(int *array_num, int len);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 size_t		ft_strlen(const char *str);
-int			*ft_int_split(char const *s, char c);
 char		**ft_split(char const *s, char c);
+void		free_matrix(char **matrix);
 int			check_number(char *argv);
 int			count_numbers(char *array);
 int			check_repeat(int *array, int len);
 int			check_max_int(char *array);
-int			*check_one_arg(char *argv, int len);
-int			*check_multiple_arg(char **argv, int len);
+int			*check_one_arg(char **args, int len);
+int			*check_multiple_args(char **args, int len);
 int			*ft_intcpy(int *dest, int *src, int len);
 char		**ft_split(char const *s, char c);
 t_list		*arg_to_list(char **argv);
